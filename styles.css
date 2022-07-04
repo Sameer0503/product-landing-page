@@ -1,0 +1,300 @@
+body{
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.page-container{
+    margin: 0 259px;
+}
+
+/**************************************************************
+*   HEADER SECTION
+***************************************************************
+*/
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 75px;
+    background-color: #eee;
+}
+
+.header__logo-container{
+    width: 60vw;
+}
+.header__logo{
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    align-self: center;
+}
+.header__nav-bar{
+    display: fixed;
+    top: 0;
+}
+.header__nav-bar-list{
+    width: 35vw;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+}
+.header__nav-link{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    margin: 0px 15px;
+}
+
+/**************************************************************
+*   EMAIL FORM SECTION
+***************************************************************
+*/
+
+.email-form-section{
+    margin-top: 75px; /* overlaps on header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email-form-section__form{
+    display: flex;
+    flex-direction: column;
+}
+.email-form-section__email-input{
+    width: 274px;
+    padding: 5px;
+    margin: 5px;
+}
+.email-form-section__submit{
+    max-width: 150px;
+    width: 150px;
+    align-self: center;
+    padding: 5px;
+    margin: 15px 15px;
+    border: none;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #f1c40f;
+}
+
+/**************************************************************
+*   FEATURES SECTION
+***************************************************************
+*/
+
+.features{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.features__grid{
+    display: flex;
+}
+.features__icon{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa{
+    color: darkorange;
+}
+.desc{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+}
+.desc h2,p{
+    margin: 0;
+}
+
+/**************************************************************
+*   HOW IT WORKS SECTION
+***************************************************************
+*/
+
+.how-it-works{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.how-it-works__video{
+    width: 560px;
+}
+
+/**************************************************************
+*   PRICING SECTION
+***************************************************************
+*/
+
+.pricing{
+    margin-top:55px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pricing__product{
+    /* height: 20vh;*/
+    width: calc(100% / 3);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 3px;
+}
+.product__name-container{
+    background-color: #ddd;
+}
+.product__name{
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+}
+.product__price{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px 0 0 0;
+}
+.product__features-list{
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+    text-align: center;
+}
+.product__features{
+    padding: 5px 0;
+}
+.product__select-btn{
+    margin: 15px 0;
+    padding: 10px 20px;
+    width: max-content;
+    font-size: 1em;
+    text-transform: uppercase;
+    align-self: center;
+    background-color: #f1c40f;
+    border: none;
+}
+
+/**************************************************************
+*   FOOTER SECTION
+***************************************************************
+*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    background-color: #ddd;
+    margin-top: 30px;
+    padding:20px
+    /* height: 20vh; */
+}
+.footer__links-list{
+    list-style: none;
+    margin: 0 10px;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__links{
+    padding:5px;
+}
+.footer__links a{
+    text-decoration: none;
+    color: black;
+}
+.footer__copyright{
+    font-size: 0.9em;
+    color: #444;
+}
+
+
+/**************************************************************
+*   MOBILE RESPONSIVE -- BREAKPOINT 900PX
+***************************************************************
+*/
+
+
+@media screen and (max-width: 900px) {
+    /* #header{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        height:max-content;
+        padding: 20px;
+    } */
+    .page-container{
+        margin: 0;
+        padding: 5%;
+    }
+
+    /* ***** HEADER SECTION ***** */
+
+    .header{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0 10px 0;
+        height: auto;
+    }
+    .header__logo-container{
+        order: 2;
+        width: auto;
+        padding: 10px;
+        
+    }
+    .header__nav-bar{
+        order: 3;
+    }
+    .header__nav-bar-list{
+        width: 100%;
+    }
+
+    /* ***** EMAIL FORM SECTION ***** */
+
+    .email-form-section{
+        margin-top: 15vh;
+    }
+    .email-form-section__heading{
+        text-align: center;
+    }
+
+    /* ***** FEATURES SECTION ***** */
+
+    .features__grid{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 2.5vh 0;
+    }
+
+    /* ***** PRICING SECTION ***** */
+
+    .pricing{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;  
+    }
+    .pricing__product{
+        width: 60vw;
+    }
+
+    /* ***** FOOTER SECTION ***** */
+
+    .footer{
+        align-items: center;
+    }
+}
